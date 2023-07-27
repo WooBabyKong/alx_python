@@ -1,4 +1,3 @@
-for i in range(100):
-    print("{:02d}".format(i), end=", " 
-          if i < 99 else "\n")
-    
+#!/usr/bin/python3
+numbers = ['{:02}'.format(i) for i in range(100)]
+print(', '.join(numbers))

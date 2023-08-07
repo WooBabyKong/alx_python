@@ -2,4 +2,9 @@ def raise_exception():
     class CustomException(Exception):
         pass
 
-    raise CustomException("This is a custom exception.")
+    raise CustomException("Exception has been raised")
+
+try:
+    raise_exception()
+except CustomException as e:
+    print(e)

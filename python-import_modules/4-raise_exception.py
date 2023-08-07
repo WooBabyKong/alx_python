@@ -1,10 +1,5 @@
 def raise_exception():
-    class CustomException(Exception):
+    try:
+        raise TypeError("This is a type exception.")
+    except TypeError:
         pass
-
-    raise CustomException("Exception has been raised")
-
-try:
-    raise_exception()
-except CustomException as e:
-    print(e)

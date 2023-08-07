@@ -4,8 +4,11 @@ def fibonacci_sequence(n):
 
     fibonacci_numbers = [0]
     while len(fibonacci_numbers) < n:
-        next_fibonacci = fibonacci_numbers[-1] + fibonacci_numbers[-2]
-        fibonacci_numbers.append(next_fibonacci)
+        if len(fibonacci_numbers) == 1:
+            fibonacci_numbers.append(1)
+        else:
+            next_fibonacci = fibonacci_numbers[-1] + fibonacci_numbers[-2]
+            fibonacci_numbers.append(next_fibonacci)
 
     return fibonacci_numbers
 
